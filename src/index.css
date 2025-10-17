@@ -185,9 +185,10 @@ input:focus {
   color: rebeccapurple;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
 .about-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -197,6 +198,7 @@ input:focus {
 .about-link a {
   color: #fff;
   cursor: pointer;
+ 
 }
 
 .about-link a:hover {
