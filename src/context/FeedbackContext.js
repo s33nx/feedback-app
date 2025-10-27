@@ -1,7 +1,6 @@
-import { text } from 'framer-motion/client'
 import { v4 as uuidv4 } from "uuid" 
-import {Children, createContext, useState, useEffect} from 'react'
-import { Await } from 'react-router-dom'
+import {createContext, useState, useEffect} from 'react'
+
 
 const FeedbackContext = createContext()
 
@@ -22,7 +21,7 @@ export const FeedbackProvider = ({children}) => {
         const data = await response.json()
 
         setFeedback(data)
-        isLoading(false)
+        setIsLoading(false)
     }
 //Add feedback
       const addFeedback = (newFeedback) => {
